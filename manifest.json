@@ -1,0 +1,29 @@
+{
+    "manifest_version": 3,
+    "name": "time-logger-extension",
+    "version": "1.0",
+    "description": "Logs time spent on PMT and Quizlet, to accurately track time spent revising.",
+    "permissions": [
+      "tabs", 
+      "storage",
+      "activeTab" 
+    ],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "host_permissions": [
+      "https://www.physicsandmathstutor.com/*",
+      "https://quizlet.com/*"
+    ],
+    "action": {
+      "default_popup": "popup.html"
+    },
+    "content_scripts": [
+
+    {
+      "matches": ["https://www.physicsandmathstutor.com/*", "https://quizlet.com/*"],
+      "js": ["content.js"],
+      "css": ["content.css"]
+    }
+  ]
+}

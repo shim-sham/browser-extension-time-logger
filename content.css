@@ -1,0 +1,30 @@
+.tracking-dot {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    border-radius: 50%;
+    box-shadow: 0 0 8px rgba(255, 0, 0, 0.7);
+    z-index: 9999;
+    opacity: 0.8;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.tracking-dot--active {
+    width: 100px;
+    height: 20px;
+    border-radius: 10px;
+    text-align: center;
+    line-height: 20px;
+    font-size: 14px;
+    color: white;
+    background-color: red;
+    font-weight: bold;
+}
+
+.tracking-dot--active::after {
+    content: " ";
+}
